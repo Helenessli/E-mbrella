@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../layout/mainheader.ejs') %>
+</head>
+<body>
+    <!--Preload screen [Logging in..]-->
+    <div class="preload" id="preload">
+        <div class="text">Logging in</div>
+        <div class="logo">
+            <img src="/images/pokeball.png" alt="Pokeball">
+            <div class="preload-ripple"></div>
+        </div>
+    </div>
+
+    <div class="chatBoxWrapper">
+        <!--The main chat area-->
+        <div class="chatBox">
+            <!-- Navigation -->
+            <%- include('../layout/app/navBar.ejs') %>
+            
+            <ul id="messages" data-scrolling="false">
+                <div class="welcome_wrapper">
+                    <li class="welcomeText">
+                        <img src="/images/greetings/<%=welcomeSticker_%>.webp" alt="Welcome Sticker" height="160px" width="160px" id="welcomeSticker">
+                        <div>Share this chat link to others to join</div>
+                        <span id="invite" class="clickable playable button" title="Click to share">Share <i class="fa-solid fa-share-nodes"></i></span>
+                    </li>
+                </div>
+                <!-- All messages will be added under here -->
+            </ul>
+            <!-- All inputs -->
+            <div class="footer">
+                <!--typing indicator-->
+                <%- include('../layout/app/typingIndicator.ejs') %>
+                <%- include('../layout/app/chatInput.ejs') %>
+            </div>
+        </div>
+    </div>
+    <div id="stickersKeyboard"></div>
+    <!--Other reactive elements-->
+    <%- include('../layout/app/attachmentChooser.ejs') %>
+    <%- include('../layout/app/sideBar.ejs') %>
+    <%- include('../layout/app/templates.ejs') %>
+    <%- include('../layout/app/metadata.ejs') %>
+    <%- include('../layout/app/quickSettings.ejs') %>
+    <%- include('../layout/app/utils.ejs') %>
+</body>
+</html>

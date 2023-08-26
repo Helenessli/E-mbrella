@@ -1,66 +1,89 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Poketab Messenger 
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/itsfuad/Poketab-Messenger?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/itsfuad/Poketab-Messenger)
+![GitHub contributors](https://img.shields.io/github/contributors/itsfuad/Poketab-Messenger?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/itsfuad/Poketab-Messanger?style=flat-square)
+[![DeepScan grade](https://deepscan.io/api/teams/20528/projects/23967/branches/733333/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=20528&pid=23967&bid=733333)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![GitHub](https://img.shields.io/github/license/itsfuad/Poketab-Messenger?style=flat-square)
+![Website](https://img.shields.io/website?down_color=Red&down_message=Offline&style=flat-square&up_color=green&up_message=Online&url=https%3A%2F%2Fpoketab.live)
 
-## About Laravel
+Poketab Messenger is a temporary chat application that allows users to create and join group chats with up to 10 people. The app utilizes a unique key system to ensure privacy and security, as users can only join a chat by using a key generated and sent by the server.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Key Features
+- Create and join group chats with up to 10 people
+- Share images, files, audio, and stickers with others in the chat
+- Built-in audio player and recorder to play and record audio within the app
+- React to messages and reply to specific messages
+- Share your location with others in the chat
+- All data is stored only on the device, ensuring maximum privacy and security
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Getting Started
+1. Open the browser of your choice on any device and navigate to https://poketab.live
+2. Once the site is loaded, create a new chat or join an existing one by using the provided key.
+3. Start chatting and sharing files, images, audio, and stickers with others in the chat.
+4. Use the built-in audio player and recorder to play and record audio within the app.
+5. React to messages and reply to specific messages.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Note:** Poketab Messenger is a Progressive Web App (PWA) and does not require any heavy installation. It can be accessed on any device and browser that supports web standards.
 
-## Learning Laravel
+Poketab Messenger is perfect for anyone looking for a secure and temporary chat option. Give it a try today!
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Run on your own local machine
 
-## Laravel Sponsors
+To run locally, follow these steps:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+1. Clone the repository
+2. Install dependencies using `npm install`
+3. Start the development server using `npm run dev`
+4. Open the app in your browser at `http://localhost:3000`
 
-### Premium Partners
+To build the production version:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+1. Type `npm run build` to compile all frontend `javascript` code to a single js bundle.
+2. Type `tsc` to compile all `typescript` code into `javascript`
+3. Commit
+4. Deploy
+You cannot use the link outside your local network. To access from outside your local network you may use `ssl tunneling` or `port forwarding`. But that is very complex to setup. You can use `ngrok` instead or other similar solutions. 
 
-## Contributing
+## Contribute
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+To contribute to this project, follow these steps:
 
-## Code of Conduct
+1. Fork the repository
+2. Create a new branch using `git checkout -b my-feature-branch`
+3. Make changes and commit them using `git commit -m "Add some feature"`
+4. Push changes to your fork using `git push origin my-feature-branch`
+5. Create a pull request
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Add more stickers
++ Copy images into `/public/stickers/YOUR_STICKER_NAME/` folder
++ Create two subfolders named `animated` and `static` and put your sticker in the directories. Name your image in count from 1. 
+```
+    1.webp
+    2.webp
+    3.webp
+    ...
+    ...
+    19.webp
+    20.webp
+```
+It's very important to have two folders. If your sticker is not animated then put the files both of the directories.
+In the `./public/stickers/stickersConfig.js` file, add your sticker name and count. 
 
-## Security Vulnerabilities
+**Note: The list order will be followed in the sticker menu.**
+```js
+const Stickers = [
+    {"name": "cat", "count": "29", "icon": "15"}, //sticker on the cat folder which contains 29 webp files and 15th image is the icon.
+    {"name": "cutecat", "count": "33", "icon": "30"},
+    {"name": "skully", "count": "26", "icon": "23"},
+    {"name": "frog", "count": "30", "icon": "18"},
+]
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Credits
+Lead Developer [Fuad Hasan](https://github.com/itsfuad).
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Email: support@poketab.live
