@@ -1,10 +1,6 @@
 node_modules
-chat.css
-chat.css.map
-entry.css
-entry.css.map
-message.css
-message.css.map
+
+
 bundle.js.LICENSE.txt
 .env
 
