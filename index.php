@@ -25,13 +25,24 @@
                 $output = shell_exec("python text.py $user_input");
                 $prediction = $output[1];
                 $confidence_score = substr($output, 3, 7);
+                $resultStyle = ""; // Initialize style variable
+
                 if ($prediction == 1) {
+                    if ($confidence_score > 0.60) {
+                        $resultStyle = "color: red;";
+                    } else {
+                        $resultStyle = "color: orange;";
+                    }
                     $pred_result = "Predator";
                 } else {
+                    $resultStyle = "color: green;";
                     $pred_result = "Normal";
                 }
-                echo "<p>Result: $pred_result</p>";
-                echo "<p>Confidence level: $confidence_score</p>";
+            
+                echo "<p class=\"message\">Message: $user_input</p>";
+                echo "<p class=\"result\" style=\"$resultStyle\">Result: $pred_result</p>";
+                echo "<p class=\"confidence\">Confidence level: $confidence_score</p>";
+            
             }
             ?>
         </div>

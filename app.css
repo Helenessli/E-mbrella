@@ -42,3 +42,18 @@ button {
     color: #e2cbfe;
     border-radius: 5px;
 }
+
+.message {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.result{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.confidence{
+    font-size: 25px;
+    font-weight: 600;
+}
