@@ -15,4 +15,5 @@ pip install torch
 pip install transformers
 
 ## UI DEMO
-<p><img src="https://github.com/Helenessli/OnlinePredatorDetector/blob/master/logo.png"></p>
+<p align="center><img src="https://github.com/Helenessli/OnlinePredatorDetector/blob/master/green.png"></p>
+<p align="center><img src="https://github.com/Helenessli/OnlinePredatorDetector/blob/master/red.png"></p>
