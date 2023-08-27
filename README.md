@@ -4,7 +4,11 @@
 To run the code, input the following commands into the terminal:
 
 python3 -m venv venv
+
 source venv/bin/activate
+
 pip install sentencepiece
+
 pip install torch
+
 pip install transformers
