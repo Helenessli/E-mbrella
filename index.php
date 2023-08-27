@@ -12,9 +12,9 @@
     </div>
     <div class="body">
         <form class="form" method="post">
-            <label for="user_input">Enter a sentence:</label>
+            <label for="user_input">Enter a sentence: </label>
             <input type="text" name="user_input">
-            <button type="submit">Submit</button>
+            <button type="submit" name="submit">Submit</button>
         </form>
         <div class="result">
             <?php
@@ -22,14 +22,19 @@
                 $user_input = $_POST["user_input"];
                 $output = shell_exec("python text.py $user_input");
                 $prediction = $output[1];
-                $confidence_score = substr($output, 3, 7);
+                $confidence_score = substr($output, 3, 5);
                 if ($prediction == 1) {
-                    $pred_result = "Predator";
+                    if ($confidence_score >= 0.6){
+                        $pred_result = "Predator";
+                        $text_color = "red";
+                    }else{$pred_result = "Might be a Predator"; $text_color = "orange";}
                 } else {
                     $pred_result = "Normal";
+                    $text_color = "green";
                 }
-                echo "<p>Result: $pred_result</p>";
-                echo "<p>Confidence level: $confidence_score</p>";
+                echo "<p> Message: $user_input </p>";
+                echo "<p style='color: $text_color;'> Result: $pred_result </p>";
+                echo "<p> Confidence level: $confidence_score </p>";
             }
             ?>
         </div>
