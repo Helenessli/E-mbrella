@@ -13,7 +13,8 @@ pip install sentencepiece
 pip install torch
 
 pip install transformers
-###You must have Python 3.0 or later installed on your computer to run those commands.
+
+You must have Python 3.0 or later installed on your computer to run those commands.
 ## UI DEMO
 <p align="center><img src="https://github.com/Helenessli/OnlinePredatorDetector/blob/master/green.png"></p>
 <p align="center><img src="https://github.com/Helenessli/OnlinePredatorDetector/blob/master/red.png"></p>
