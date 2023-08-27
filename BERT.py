@@ -133,11 +133,11 @@ labels = [item["label"] for item in data]
 
 #pretrained model
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-# model = BertForSequenceClassification.from_pretrained('bert-base-uncased', num_labels=2)
+model = BertForSequenceClassification.from_pretrained('bert-base-uncased', num_labels=2)
 
 #training model
 # tokenizer = BertTokenizer.from_pretrained('custom_bert_model')
-model = BertForSequenceClassification.from_pretrained('./custom_bert_model/', num_labels=2)
+# model = BertForSequenceClassification.from_pretrained('./custom_bert_model/', num_labels=2)
 
 #pre-trained model
 # model.save_pretrained('custom_bert_model')
@@ -149,29 +149,34 @@ batch_size = 16
 train_loader = DataLoader(train_dataset, batch_size=batch_size, sampler=RandomSampler(train_dataset))
 
 # Training loop
-# optimizer = AdamW(model.parameters(), lr=2e-5)
-# for epoch in range(3):
-#     model.train()
-#     for batch in train_loader:
-#         optimizer.zero_grad()
-#         input_ids = batch['input_ids']
-#         attention_mask = batch['attention_mask']
-#         labels = batch['labels']
-#         outputs = model(input_ids, attention_mask=attention_mask, labels=labels)
-#         loss = outputs.loss
-#         loss.backward()
-#         optimizer.step()
+optimizer = AdamW(model.parameters(), lr=2e-5)
+for epoch in range(3):
+    model.train()
+    for batch in train_loader:
+        optimizer.zero_grad()
+        input_ids = batch['input_ids']
+        attention_mask = batch['attention_mask']
+        labels = batch['labels']
+        outputs = model(input_ids, attention_mask=attention_mask, labels=labels)
+        loss = outputs.loss
+        loss.backward()
+        optimizer.step()
 
-# Prediction
-model.eval()
 
-with torch.no_grad():
-    input_text = "how's the weather today?"
-    input_encoding = tokenizer(input_text, return_tensors='pt', padding='max_length', truncation=True, max_length=128)
-    output = model(**input_encoding)
-    probs = torch.softmax(output.logits, dim=1)
-    confidence_score = probs.max().item()
-    predicted_label = probs.argmax().item()
+def predict_text(input_text):
+    # Prediction
+    model.eval()
 
-print(f"Predicted Label: {predicted_label}")
-print(f"Confidence Score: {confidence_score:.4f}")
+    with torch.no_grad():
+        input_text = input_text
+        input_encoding = tokenizer(input_text, return_tensors='pt', padding='max_length', truncation=True, max_length=128)
+        output = model(**input_encoding)
+        probs = torch.softmax(output.logits, dim=1)
+        confidence_score = probs.max().item()
+        predicted_label = probs.argmax().item()
+        return [confidence_score, predicted_label]
+
+# print(f"Predicted Label: {predicted_label}")
+# print(f"Confidence Score: {confidence_score:.4f}")
+
+print(predict_text("Hello little kitty"))
