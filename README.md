@@ -17,4 +17,4 @@ pip install transformers
 **You must have Python 3.0 or later installed on your computer to run those commands.**
 ## UI DEMO
 <img width="1695" alt="Pasted Graphic" src="https://github.com/Helenessli/OnlinePredatorDetector/assets/77468352/b00e71c3-9b6a-4cdb-b610-68622fd97583">
-<img width="1684" alt="Pasted Graphic 1" src="https://github.com/Helenessli/OnlinePredatorDetector/assets/77468352/c6ea25f0-86bb-44a0-9eec-8d7d8cc37da6">
+<img width="1684" alt="Pasted Graphic 1" src="https://github.com/Helenessli/OnlinePredatorDetector/assets/77468352/0e9d3513-ae13-472f-8a0d-5883c0827e01">
