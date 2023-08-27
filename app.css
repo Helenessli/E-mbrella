@@ -22,8 +22,23 @@
     text-align: center;
     justify-content: center;
     background-color: #f3f2f7;
+    height: 100vh;
 }
 
 form {
     padding-top: 50px;
+    font-size: 25px;
+}
+
+input {
+    margin-top:20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #6c459e;
+    color: #e2cbfe;
+    border-radius: 5px;
 }

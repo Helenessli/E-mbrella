@@ -11,11 +11,13 @@
         <h1 class="h1">E-mbrella Predator Detector</h1>
     </div>
     <div class="body">
+        <div class="formcontainer">
         <form class="form" method="post">
-            <label for="user_input">Enter a message:</label>
-            <input type="text" name="user_input">
+            <label for="user_input" class="label">Enter a message:</label><br>
+            <input type="text" name="user_input"><br>
             <button type="submit">Submit</button>
         </form>
+        </div>
         <div class="result">
             <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
