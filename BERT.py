@@ -29,7 +29,7 @@ data = [
     {"text": "I like to see your body without t-shirt. ", "label": 1},
     {"text": "you can. make some new pics in bathroom. ", "label": 1},
     {"text": "without clothes.don't tell to anyone. ", "label": 1},
-    {"text": "it's secret between us only. ", "label": 1},
+    {"text": "it's a secret between us only. ", "label": 1},
     {"text": "do you like older men?", "label": 1},
     {"text": "what are you wearing right now?", "label": 1},
     {"text": "you look nice", "label": 1},
@@ -174,9 +174,7 @@ def predict_text(input_text):
         probs = torch.softmax(output.logits, dim=1)
         confidence_score = probs.max().item()
         predicted_label = probs.argmax().item()
-        return [confidence_score, predicted_label]
+    
+    return [predicted_label, confidence_score]
 
-# print(f"Predicted Label: {predicted_label}")
-# print(f"Confidence Score: {confidence_score:.4f}")
-
-print(predict_text("Hello little kitty"))
+# print(predict_text("Hello little kitty"))

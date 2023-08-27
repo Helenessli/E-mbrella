@@ -13,7 +13,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user_input = $_POST["user_input"];
         $output = shell_exec("python text.py $user_input");
-        echo "<p>Modified input: $output</p>";
+        echo "<p>Result: $output</p>";
     }
     ?>
 </body>
