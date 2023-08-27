@@ -35,10 +35,30 @@
                 echo "<p> Message: $user_input </p>";
                 echo "<p style='color: $text_color;'> Result: $pred_result </p>";
                 echo "<p> Confidence level: $confidence_score </p>";
+
+                echo '<button type="button" id="flagButton">Flag</button>';
+                echo '<div id="flagTextBox" style="display: none;">';
+                echo '<textarea name="flagReason" placeholder="Enter flag reason"></textarea>';
+                echo '<button type="button" id="submitFlagButton">Submit Flag</button>';
+                echo '</div>';
             }
+
+            
             ?>
+        </form>
         </div>
     </div>
+
+    <script>
+        // JavaScript to show/hide the flag text box
+        document.getElementById("flagButton").addEventListener("click", function () {
+            var flagTextBox = document.getElementById("flagTextBox");
+            flagTextBox.style.display = flagTextBox.style.display === "none" ? "block" : "none";
+        });
+
+        // Add any additional JavaScript code here for handling flag submission
+        // For example, you can use AJAX to send the flag reason to the server.
+    </script>
 
 </body>
 
