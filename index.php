@@ -12,7 +12,7 @@
     </div>
     <div class="body">
         <form class="form" method="post">
-            <label for="user_input">Enter a sentence:</label>
+            <label for="user_input">Enter a message:</label>
             <input type="text" name="user_input">
             <button type="submit">Submit</button>
         </form>
