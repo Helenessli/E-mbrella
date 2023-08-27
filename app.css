@@ -1,14 +1,8 @@
 * {
     margin: 0;
-    padding:0; 
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Gill Sans', sans-serif;
-}
-
-.header {
-    background-color: #6c459e;
-    color: #e2cbfe;
-    text-align: center;
 }
 
 .h1 {
@@ -18,42 +12,49 @@
     font-weight: 600;
 }
 
+.header {
+    background-color: #6c459e;
+    color: #e2cbfe;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-weight: 600;
+}
+
 .body {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column; /* Change to column layout */
     text-align: center;
     justify-content: center;
+    align-items: center;
     background-color: #f3f2f7;
     height: 100vh;
+    padding-bottom: 350px;
 }
 
-form {
+.form {
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    align-items: center;
     padding-top: 50px;
-    font-size: 25px;
+    padding-bottom: 50px;
 }
 
-input {
-    margin-top:20px;
-    margin-bottom: 20px;
-    font-size: 25px;
+.result {
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #6c459e;
-    color: #e2cbfe;
-    border-radius: 5px;
+    /* padding-top: 50px; */
+
 }
 
-.message {
-    font-size: 25px;
-    font-weight: 600;
-}
-
-.result{
-    font-size: 25px;
-    font-weight: 600;
-}
-
-.confidence{
-    font-size: 25px;
-    font-weight: 600;
+label {
+    padding-bottom: 50px;
 }
