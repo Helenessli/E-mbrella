@@ -3,6 +3,8 @@
 ![logo](https://github.com/Helenessli/OnlinePredatorDetector/blob/master/logo.png)
 **This project was created as a submission for Ignition Hacks v.4 which took place August 25, 2023 to Aug 27, 2023.**
 
+More details about the project are available on Devpost: https://devpost.com/software/e-mbrella
+
 To run the code, input the following commands into the terminal:
 
 python3 -m venv venv
